@@ -65,14 +65,9 @@ const SocialMediaIcons = styled.div`
 `;
 
 const SocialMediaIcon = styled.a`
-  display: inline-block;
-  margin: 0 1rem;
-  font-size: 1.5rem;
-  color: ${({ theme }) => theme.text_primary};
-  transition: color 0.2s ease-in-out;
-  &:hover {
-    color: ${({ theme }) => theme.primary};
-  }
+  font-size: 0.9rem;
+  color: ${({ theme }) => theme.soft2};
+  text-align: center;
 `;
 
 const Copyright = styled.p`
@@ -81,6 +76,8 @@ const Copyright = styled.p`
   color: ${({ theme }) => theme.soft2};
   text-align: center;
 `;
+
+
 
 function Footer() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -97,6 +94,12 @@ function Footer() {
     <FooterContainer>
       <FooterWrapper>
         <Logo>Quality Security Service</Logo>
+        <SocialMediaIcon>
+          Ph : 6382288638 , 9841628844
+        </SocialMediaIcon>
+        <SocialMediaIcon>
+          Email : quality.sdb15@gmail.com , quality.fms16@gmail.com
+        </SocialMediaIcon>
         <Nav>
           <NavLink href="#about">About</NavLink>
           <NavLink href="#skills">Gallery</NavLink>

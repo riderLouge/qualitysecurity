@@ -126,28 +126,87 @@ const ContactButton = styled.input`
 `;
 
 const Contact = () => {
+
   //hooks
   const [open, setOpen] = React.useState(false);
-  const form = useRef();
+  const [message, setMessage] = React.useState("");
+  const [name, setName] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const [contact, setContact] = React.useState("");
+  const [userMessage, setUserMessage] = React.useState("");
+  const form = useRef(null); 
+  const [messageType, setMessageType] = React.useState(""); 
+
+
+  const Message = styled.div`
+  color: ${(messageType === "success" ? "green" : "red")};
+  font-size: 14px;
+  margin-top: 5px;
+  `;
+
+  const clearMessage = () => {
+    setTimeout(() => {
+      setMessage("");
+    }, 5000); // Clear message after 5 seconds
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_k8djp9f",
-        "template_bk4ittp",
-        form.current,
-        "gBCQ99M9O_qeu9mkX"
-      )
-      .then(
-        (result) => {
-          setOpen(true);
-          form.current.reset();
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+
+    // Validation checks
+    if (!name.trim()) {
+      setMessage("Please enter your name.");
+      setMessageType("error")
+      clearMessage();
+      return;
+    }
+
+    if (!/^\d{10}$/.test(contact.trim())) {
+      setMessage("Please enter a valid 10-digit contact number.");
+      setMessageType("error")
+      clearMessage();
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(email.trim())) {
+      setMessage("Please enter a valid email address.");
+      setMessageType("error");
+      clearMessage();
+      return;
+    }
+
+    if (!userMessage.trim()) {
+      setMessage("Please enter your message.");
+      setMessageType("error")
+      clearMessage();
+      return;
+    }
+
+    if (form.current) {
+      // If all validations pass, proceed to send the email
+      emailjs
+        .sendForm("service_vgakv2p", "template_c44iy6r", form.current, "3IdgepZSbXbvgOpvh")
+        .then(() => {
+          setMessage("Email sent successfully!");
+          setName("");
+          setEmail("");
+          setContact("");
+          setUserMessage("");
+          clearMessage();
+          setMessageType("success")
+        })
+        .catch((error) => {
+          setMessage("Failed to send email. Please try again later.");
+          setMessageType("error")
+          clearMessage();
+        });
+    } else {
+      setMessage("Form not initialized properly. Please try again.");
+      setMessageType("error")
+      clearMessage();
+    }
   };
 
   return (
@@ -158,13 +217,35 @@ const Contact = () => {
           Feel free to reach out to me for any questions or opportunities!
         </Desc>
         <ContactForm ref={form} onSubmit={handleSubmit}>
-          <ContactTitle>Email Me 🚀</ContactTitle>
-          <ContactInput placeholder="Your Email" name="from_email" />
-          <ContactInput placeholder="Your Name" name="from_name" />
-          <ContactInput placeholder="Subject" name="subject" />
-          <ContactInputMessage placeholder="Message" rows="4" name="message" />
-          <ContactButton type="submit" value="Send" />
-        </ContactForm>
+            <ContactTitle>Get in Touch with us!</ContactTitle>
+            <ContactInput
+              placeholder="Your Name"
+              name="from_name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+            <ContactInput
+              placeholder="Your Email"
+              name="from_email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+             <ContactInput
+              placeholder="Your Contact Number"
+              name="contact"
+              value={contact}
+              onChange={(e) => setContact(e.target.value)}
+            />
+            <ContactInputMessage
+              placeholder="Message"
+              rows={4}
+              name="message"
+              value={userMessage}
+              onChange={(e) => setUserMessage(e.target.value)}
+            />
+            {message && <Message>{message}</Message>}
+            <ContactButton type="submit" value="Send" />
+          </ContactForm>
         <Snackbar
           open={open}
           autoHideDuration={6000}

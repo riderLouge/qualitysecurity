@@ -84,7 +84,7 @@ function App() {
                 style={{ fontSize: "34px", fontWeight: "bold", color: "#333" }}
               >
                 Our Highlights
-              </p>{" "}
+              </p>
               <ImageContainer>
                 <Image src={pic} alt="Services" />
               </ImageContainer>

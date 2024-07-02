@@ -3,28 +3,27 @@ import {
   Nav,
   NavLink,
   NavbarContainer,
-  Span,
   NavLogo,
   NavItems,
-  GitHubButton,
-  ButtonContainer,
   MobileIcon,
   MobileMenu,
-  MobileNavLogo,
   MobileLink,
   LogoImage,
 } from "./NavbarStyledComponent";
 import { DiCssdeck } from "react-icons/di";
 import { FaBars } from "react-icons/fa";
-import { Bio } from "../../data/constants";
-import { Close, CloseRounded } from "@mui/icons-material";
 import { useTheme } from "styled-components";
+import { useMediaQuery } from "react-responsive";
 import logo from "../../asset/logo1.jpeg";
 import logo2 from "../../asset/logo2.jpeg";
+import logo3 from "../../asset/Quality_Security_logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   const theme = useTheme();
+
+  const isMobile = useMediaQuery({ maxWidth: 768 });
+
   return (
     <Nav>
       <NavbarContainer>
@@ -38,7 +37,14 @@ const Navbar = () => {
               cursor: "pointer",
             }}
           >
-            <LogoImage src={logo} alt="Logo" />
+            {isMobile ? (
+              <LogoImage src={logo3} alt="Logo" style={{width:"50%",height:"50%"}}/>
+            ) : (
+              <>
+                <LogoImage src={logo} alt="Logo" />
+                <LogoImage src={logo2} alt="Logo" />
+              </>
+            )}
           </a>
         </NavLogo>
         <MobileIcon>
@@ -53,12 +59,7 @@ const Navbar = () => {
           <NavLink href="#projects">Services</NavLink>
           <NavLink href="#skills">Gallery</NavLink>
           <NavLink href="#contact">Contact Us</NavLink>
-
-          {/* <NavLink href="#education">Education</NavLink> */}
         </NavItems>
-        {/* <ButtonContainer>
-          <GitHubButton target="_blank"> Contact</GitHubButton>
-        </ButtonContainer> */}
         {isOpen && (
           <MobileMenu isOpen={isOpen}>
             <MobileLink
@@ -93,41 +94,8 @@ const Navbar = () => {
             >
               Contact
             </MobileLink>
-            {/* <MobileLink
-              href="#education"
-              onClick={() => {
-                setIsOpen(!isOpen);
-              }}
-            >
-              Education
-            </MobileLink> */}
-            {/* <GitHubButton
-              style={{
-                padding: "10px 16px",
-                background: `${theme.primary}`,
-                color: "white",
-                width: "max-content",
-              }}
-              // href={Bio.github}
-              target="_blank"
-            >
-              Contact
-            </GitHubButton> */}
           </MobileMenu>
         )}
-        {/* <NavLogo to="/">
-          <a
-            style={{
-              display: "flex",
-              alignItems: "center",
-              color: "black",
-              marginBottom: "20;",
-              cursor: "pointer",
-            }}
-          >
-            <LogoImage src={logo2} alt="Logo" />
-          </a>
-        </NavLogo> */}
       </NavbarContainer>
     </Nav>
   );
