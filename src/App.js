@@ -13,6 +13,7 @@ import Education from "./components/Education";
 import Skills from "./components/Destination";
 import StatsSection from "./components/Stats";
 import pic from "../src/asset/h1.png";
+import PhoneDialer from "./components/PhoneDialer";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -94,6 +95,7 @@ function App() {
               <Contact />
             </div>
           </Wrapper>
+          <PhoneDialer /> {/* Add the phone icon component */}
           <Footer />
           {openModal.state && (
             <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />

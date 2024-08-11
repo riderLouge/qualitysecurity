@@ -320,7 +320,7 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Investigation",
+    title: "Security Officers (SO)",
     PlsNote:
       "Unlocking the truth through meticulous analysis, our Fingerprint Investigation Services stand as a hallmark of precision and expertise. We specialize in unraveling mysteries and solving cases by harnessing the power of fingerprint analysis, a forensic technique that has proven instrumental in countless investigations..",
     image:
@@ -338,7 +338,7 @@ export const projects = [
   },
   {
     id: 4,
-    title: "Other Security Service",
+    title: "Assistant Security Officer (ASO)",
     PlsNote:
       "Additional Specialized Services which we provide are Advanced Security Systems Installation , Security Management ,Assistant Security Officer (ASO) Services,Apart from this contact for custom services",
     image:

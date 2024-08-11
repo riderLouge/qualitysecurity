@@ -26,6 +26,28 @@ export const HeroContainer = styled.div`
   z-index: 1;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%);
 `;
+
+export const Typography = styled.div`
+  font-size: 24px; /* Adjust font size */
+  font-weight: 500; /* Medium weight */
+  color: ${({ theme }) => theme.text_secondary}; /* Secondary text color */
+  margin-bottom: 16px; /* Space between each Typography */
+  padding: 8px 16px; /* Padding around the text */
+  background: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  width: 40%; /* Reduced width to 40% of the container */
+
+  @media (max-width: 960px) {
+    font-size: 20px; /* Adjust font size for medium screens */
+  }
+
+  @media (max-width: 640px) {
+    font-size: 18px; /* Adjust font size for small screens */
+    margin-bottom: 12px; /* Reduce margin for small screens */
+  }
+`;
+
 export const HeroBg = styled.div`
   position: absolute;
   display: flex;
