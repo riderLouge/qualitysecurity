@@ -43,8 +43,8 @@ export const Typography = styled.div`
   }
 
   @media (max-width: 640px) {
-    font-size: 18px; /* Adjust font size for small screens */
-    margin-bottom: 12px; /* Reduce margin for small screens */
+    font-size: 10px; /* Adjust font size for small screens */
+    margin-bottom: 6px; /* Reduce margin for small screens */
   }
 `;
 
@@ -98,9 +98,7 @@ export const HeroLeftContainer = styled.div`
   @media (max-width: 640px) {
     order: 2;
     margin-bottom: 30px;
-    display: flex;
     flex-direction: column;
-    align-items: center;
   }
 `;
 
@@ -152,9 +150,10 @@ export const Title = styled.div`
   }
 
   @media (max-width: 640px) {
-    font-size: 40px;
-    line-height: 48px;
-    margin-bottom: 8px;
+    font-size: 26px;
+    line-height: 38px;
+    margin-bottom: 4px;
+    
   }
 `;
 
@@ -224,5 +223,7 @@ export const ResumeButton = styled.a`
     @media (max-width: 640px) {
         padding: 12px 0;
         font-size: 18px;
+        margin-bottom: 10px;
+
     } 
 `;

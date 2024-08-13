@@ -43,7 +43,7 @@ const Card = styled.div`
   }
   @media (max-width: 768px) {
     width: 110px;
-    height: 110px;
+    height: 150px;
     padding: 5.5px 5.5px;
   }
 `;

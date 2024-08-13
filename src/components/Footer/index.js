@@ -25,7 +25,7 @@ const FooterWrapper = styled.footer`
 
 const Logo = styled.h1`
   font-weight: 600;
-  font-size: 20px;
+  font-size: 25px;
   color: ${({ theme }) => theme.primary};
 `;
 
@@ -51,6 +51,7 @@ const NavLink = styled.a`
   text-decoration: none;
   font-size: 1.2rem;
   transition: color 0.2s ease-in-out;
+  font-weight: 500; /* Makes the font bold */
   &:hover {
     color: ${({ theme }) => theme.primary};
   }
@@ -68,6 +69,8 @@ const SocialMediaIcon = styled.a`
   font-size: 0.9rem;
   color: ${({ theme }) => theme.soft2};
   text-align: center;
+  font-weight: 500; /* Makes the font bold */
+
 `;
 
 const Copyright = styled.p`
@@ -75,6 +78,8 @@ const Copyright = styled.p`
   font-size: 0.9rem;
   color: ${({ theme }) => theme.soft2};
   text-align: center;
+    font-weight: 500; /* Makes the font bold */
+
 `;
 
 

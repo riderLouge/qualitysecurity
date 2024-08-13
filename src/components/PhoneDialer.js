@@ -25,7 +25,7 @@ const PhoneIcon = styled(FaPhone)`
 
 const PhoneDialer = () => {
   const handleClick = () => {
-    window.location.href = 'tel:1234567890'; /* Opens the dialer with the specified number */
+    window.location.href = 'tel:6382288638'; 
   };
 
   return (

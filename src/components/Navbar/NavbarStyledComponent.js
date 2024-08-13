@@ -33,6 +33,12 @@ export const LogoImage = styled.img`
   margin-right: 8px; // Adjust the margin between the logo and text
 `;
 
+export const LogoImage2 = styled.img`
+  width: 12rem; // Adjust the width of the logo as needed
+  height: auto; // Maintain the aspect ratio
+  margin-right: 8px; // Adjust the margin between the logo and text
+`;
+
 export const NavLogo = styled(LinkR)`
   width: 100%;
   padding: 0 6px;

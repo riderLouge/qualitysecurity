@@ -12,7 +12,7 @@ import {
 } from "./ProjectsStyle";
 import ProjectCard from "../Cards/projectCard";
 import { projects } from "../../data/constants";
-import pic from "../../asset/updatedS-removebg-preview.png";
+import pic from "../../asset/test1.png";
 
 const Projects = ({ openModal, setOpenModal }) => {
   const [toggle, setToggle] = React.useState("all");

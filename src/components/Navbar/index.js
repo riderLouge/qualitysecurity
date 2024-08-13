@@ -9,14 +9,15 @@ import {
   MobileMenu,
   MobileLink,
   LogoImage,
+  LogoImage2,
 } from "./NavbarStyledComponent";
 import { DiCssdeck } from "react-icons/di";
 import { FaBars } from "react-icons/fa";
 import { useTheme } from "styled-components";
 import { useMediaQuery } from "react-responsive";
-import logo from "../../asset/logo1.jpeg";
-import logo2 from "../../asset/logo2.jpeg";
-import logo3 from "../../asset/Quality_Security_logo.png";
+import logo from "../../asset/p1.png";
+import logo2 from "../../asset/p2.png";
+import logo3 from "../../asset/p1.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -42,7 +43,7 @@ const Navbar = () => {
             ) : (
               <>
                 <LogoImage src={logo} alt="Logo" />
-                <LogoImage src={logo2} alt="Logo" />
+                <LogoImage2 src={logo2} alt="Logo" />
               </>
             )}
           </a>

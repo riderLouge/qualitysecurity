@@ -329,7 +329,7 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Security Guard",
+    title: "Assistant Security Officer (ASO)",
     PlsNote:
       "Elevate your security standards with our comprehensive Security Guard Services, tailored for malls, flats, industries, offices, and more. Our extensively trained personnel specialize in meticulous risk assessment, utilizing advanced surveillance technology for vigilant monitoring. With a customer-focused approach, we prioritize both safety and positive experiences. Whether it's crowd control, access monitoring, or emergency response, our customizable solutions ensure tailored protection. Expect 24/7 coverage, swift emergency response protocols, and a dedicated team committed to creating a secure environment.",
     image:
@@ -338,7 +338,7 @@ export const projects = [
   },
   {
     id: 4,
-    title: "Assistant Security Officer (ASO)",
+    title: "Security Guard",
     PlsNote:
       "Additional Specialized Services which we provide are Advanced Security Systems Installation , Security Management ,Assistant Security Officer (ASO) Services,Apart from this contact for custom services",
     image:
@@ -347,7 +347,7 @@ export const projects = [
   },
   {
     id: 5,
-    title: "Executive Protection / Bodyguards",
+    title: "House Keeping",
     PlsNote:
       "Ensure the safety and well-being of your key personnel with our premier Executive Protection and Bodyguard services. Our highly trained and experienced team is dedicated to providing discreet and professional security for executives, VIPs, and individuals requiring specialized protection.Trust us to safeguard what matters most to you, allowing you to focus on your priorities with the assurance that you are in capable and secure hands.",
     image:
@@ -356,7 +356,7 @@ export const projects = [
   },
   {
     id: 6,
-    title: "Executive Protection / Bodyguards",
+    title: "Office Assistant",
     PlsNote:
       "Ensure the safety and well-being of your key personnel with our premier Executive Protection and Bodyguard services. Our highly trained and experienced team is dedicated to providing discreet and professional security for executives, VIPs, and individuals requiring specialized protection.Trust us to safeguard what matters most to you, allowing you to focus on your priorities with the assurance that you are in capable and secure hands.",
     image:
