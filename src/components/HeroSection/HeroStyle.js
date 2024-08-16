@@ -29,13 +29,9 @@ export const HeroContainer = styled.div`
 
 export const Typography = styled.div`
   font-size: 24px; /* Adjust font size */
-  font-weight: 500; /* Medium weight */
-  color: ${({ theme }) => theme.text_secondary}; /* Secondary text color */
+  font-weight: bold; /* Medium weight */
+  color: black; /* Secondary text color */
   margin-bottom: 16px; /* Space between each Typography */
-  padding: 8px 16px; /* Padding around the text */
-  background: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   width: 40%; /* Reduced width to 40% of the container */
 
   @media (max-width: 960px) {
@@ -43,8 +39,9 @@ export const Typography = styled.div`
   }
 
   @media (max-width: 640px) {
-    font-size: 10px; /* Adjust font size for small screens */
+    font-size: 15px; /* Adjust font size for small screens */
     margin-bottom: 6px; /* Reduce margin for small screens */
+    width: 70%;
   }
 `;
 
@@ -218,7 +215,7 @@ export const ResumeButton = styled.a`
         transition: all 0.4s ease-in-out;
         box-shadow: 20px 20px 60px #1F2634, filter: brightness(1);
     }    
-    margin-bottom: 80px;
+    margin-bottom: 40px;
 
     @media (max-width: 640px) {
         padding: 12px 0;

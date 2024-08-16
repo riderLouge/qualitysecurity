@@ -15,13 +15,15 @@ const PhoneIcon = styled(FaPhone)`
   cursor: pointer;
   z-index: 1000; /* Make sure it stays on top of other elements */
   transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
-  
+  transform: scaleX(-1); /* Flip horizontally */
+
   &:hover {
-    transform: scale(1.1); /* Slightly enlarge on hover */
+    transform: scale(1.1) scaleX(-1); /* Slightly enlarge and keep flipped on hover */
     background: linear-gradient(135deg, #0056b3, #003d7a); /* Darker gradient on hover */
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
   }
 `;
+
 
 const PhoneDialer = () => {
   const handleClick = () => {

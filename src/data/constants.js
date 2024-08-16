@@ -7,7 +7,12 @@ import img6 from "../asset/6.jpeg"
 import img7 from "../asset/7.jpeg"
 import img8 from "../asset/8.jpeg"
 import img9 from "../asset/9.jpeg"
-
+import ebd from "../asset/ebd.jpg"
+import so from "../asset/so.jpeg"
+import aso from "../asset/aso.avif"
+import sg from "../asset/sg.jpeg"
+import of from "../asset/of.jpg"
+import hk from "../asset/hk.jpeg"
 export const Bio = {
   name: "Quality Security",
   roles: ["Leh trip", "Manali trip", "Spiti trip"],
@@ -315,7 +320,7 @@ export const projects = [
     PlsNote:
       "Ensure the safety and well-being of your key personnel with our premier Executive Protection and Bodyguard services. Our highly trained and experienced team is dedicated to providing discreet and professional security for executives, VIPs, and individuals requiring specialized protection.Trust us to safeguard what matters most to you, allowing you to focus on your priorities with the assurance that you are in capable and secure hands.",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3cMteHIAie0ewfE9A2tu4OnWSTM1ubYHS3A&usqp=CAU",
+    ebd,
     category: "Security Service",
   },
   {
@@ -324,7 +329,7 @@ export const projects = [
     PlsNote:
       "Unlocking the truth through meticulous analysis, our Fingerprint Investigation Services stand as a hallmark of precision and expertise. We specialize in unraveling mysteries and solving cases by harnessing the power of fingerprint analysis, a forensic technique that has proven instrumental in countless investigations..",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3cMteHIAie0ewfE9A2tu4OnWSTM1ubYHS3A&usqp=CAU",
+     so,
     category: "Security Service",
   },
   {
@@ -333,7 +338,7 @@ export const projects = [
     PlsNote:
       "Elevate your security standards with our comprehensive Security Guard Services, tailored for malls, flats, industries, offices, and more. Our extensively trained personnel specialize in meticulous risk assessment, utilizing advanced surveillance technology for vigilant monitoring. With a customer-focused approach, we prioritize both safety and positive experiences. Whether it's crowd control, access monitoring, or emergency response, our customizable solutions ensure tailored protection. Expect 24/7 coverage, swift emergency response protocols, and a dedicated team committed to creating a secure environment.",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3cMteHIAie0ewfE9A2tu4OnWSTM1ubYHS3A&usqp=CAU",
+    aso,
     category: "Security Service",
   },
   {
@@ -342,7 +347,7 @@ export const projects = [
     PlsNote:
       "Additional Specialized Services which we provide are Advanced Security Systems Installation , Security Management ,Assistant Security Officer (ASO) Services,Apart from this contact for custom services",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3cMteHIAie0ewfE9A2tu4OnWSTM1ubYHS3A&usqp=CAU",
+      sg,
     category: "Security Service",
   },
   {
@@ -351,7 +356,7 @@ export const projects = [
     PlsNote:
       "Ensure the safety and well-being of your key personnel with our premier Executive Protection and Bodyguard services. Our highly trained and experienced team is dedicated to providing discreet and professional security for executives, VIPs, and individuals requiring specialized protection.Trust us to safeguard what matters most to you, allowing you to focus on your priorities with the assurance that you are in capable and secure hands.",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3cMteHIAie0ewfE9A2tu4OnWSTM1ubYHS3A&usqp=CAU",
+     hk,
     category: "Facility Service",
   },
   {
@@ -360,7 +365,7 @@ export const projects = [
     PlsNote:
       "Ensure the safety and well-being of your key personnel with our premier Executive Protection and Bodyguard services. Our highly trained and experienced team is dedicated to providing discreet and professional security for executives, VIPs, and individuals requiring specialized protection.Trust us to safeguard what matters most to you, allowing you to focus on your priorities with the assurance that you are in capable and secure hands.",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3cMteHIAie0ewfE9A2tu4OnWSTM1ubYHS3A&usqp=CAU",
+     of,
     category: "Facility Service",
   },
 ];
