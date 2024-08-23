@@ -14,6 +14,7 @@ import Skills from "./components/Destination";
 import StatsSection from "./components/Stats";
 import pic from "../src/asset/h1.png";
 import PhoneDialer from "./components/PhoneDialer";
+import Clients from "./components/clients";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -89,6 +90,15 @@ function App() {
               <ImageContainer>
                 <Image src={pic} alt="Services" />
               </ImageContainer>
+            </Container>
+            <Container>
+              <p
+                style={{ fontSize: "34px", fontWeight: "bold", color: "#333" }}
+              >
+                Our Clients
+              </p>
+              <Clients/>
+
             </Container>
 
             <div style={{ paddingBottom: "100px" }}>

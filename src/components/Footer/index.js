@@ -1,8 +1,5 @@
-// Footer.js
 import React, { useState } from "react";
 import styled from "styled-components";
-import YouTubeIcon from "@mui/icons-material/YouTube";
-import InstagramIcon from "@mui/icons-material/Instagram";
 import Dialog from "./Dialog"; // Adjust the import path based on your project structure
 
 const FooterContainer = styled.div`
@@ -21,12 +18,15 @@ const FooterWrapper = styled.footer`
   align-items: center;
   padding: 1rem;
   color: ${({ theme }) => theme.text_primary};
+  text-align: center; /* Center align the text within the FooterWrapper */
 `;
 
 const Logo = styled.h1`
   font-weight: 600;
   font-size: 25px;
   color: ${({ theme }) => theme.primary};
+  width: 100%; /* Ensure the logo takes up the full width of its container */
+  display: inline-block; /* Ensures that it behaves like a block element for centering */
 `;
 
 const Nav = styled.nav`
@@ -60,17 +60,11 @@ const NavLink = styled.a`
   }
 `;
 
-const SocialMediaIcons = styled.div`
-  display: flex;
-  margin-top: 1rem;
-`;
-
-const SocialMediaIcon = styled.a`
+const SocialMediaIcon = styled.p`
   font-size: 0.9rem;
   color: ${({ theme }) => theme.soft2};
   text-align: center;
   font-weight: 500; /* Makes the font bold */
-
 `;
 
 const Copyright = styled.p`
@@ -78,11 +72,8 @@ const Copyright = styled.p`
   font-size: 0.9rem;
   color: ${({ theme }) => theme.soft2};
   text-align: center;
-    font-weight: 500; /* Makes the font bold */
-
+  font-weight: 500; /* Makes the font bold */
 `;
-
-
 
 function Footer() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -98,12 +89,12 @@ function Footer() {
   return (
     <FooterContainer>
       <FooterWrapper>
-        <Logo>Quality Security Service</Logo>
+        <Logo>Quality Security & Detective Bureau</Logo>
         <SocialMediaIcon>
-          Ph : 6382288638 , 9841628844
+          Ph : 6382288638, 9841628844
         </SocialMediaIcon>
         <SocialMediaIcon>
-          Email : quality.sdb15@gmail.com , quality.fms16@gmail.com
+          Email : quality.sdb15@gmail.com, quality.fms16@gmail.com
         </SocialMediaIcon>
         <Nav>
           <NavLink href="#about">About</NavLink>
@@ -112,16 +103,8 @@ function Footer() {
           <NavLink href="#contact">Contact</NavLink>
           {/* <NavLink onClick={handleManageClick}>Manage</NavLink> */}
         </Nav>
-        {/* <SocialMediaIcons>
-          <SocialMediaIcon>
-            <YouTubeIcon />
-          </SocialMediaIcon>
-          <SocialMediaIcon>
-            <InstagramIcon />
-          </SocialMediaIcon>
-        </SocialMediaIcons> */}
         <Copyright>
-          &copy; 2023 Quality Security Service. All rights reserved.
+          &copy; 2015 Quality Security & Detective Bureau. All rights reserved.
         </Copyright>
         <Dialog open={isDialogOpen} onClose={handleCloseDialog} />
       </FooterWrapper>
