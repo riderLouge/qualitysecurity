@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 const stats = [
   { id: 1, name: "Years of Experience", value: "10+" },
-  { id: 2, name: "Clients Served", value: "500" },
+  { id: 2, name: "Clients Served", value: "150" },
   { id: 3, name: "Security Personnel", value: "200+" },
 ];
 
@@ -58,7 +58,7 @@ const StatsSection = () => {
           <span style={{ fontWeight: "bold" }}>We take pride</span> in our achievements and the value we bring to our clients. With over{" "}
           <span style={{ fontWeight: "bold" }}>10 years of experience</span> under the leadership of our owner,{" "}
           <span style={{ fontWeight: "bold" }}>B. Ravi</span>, we have successfully served more than{" "}
-          <span style={{ fontWeight: "bold" }}>500 clients</span>, providing top-notch security solutions. Our dedicated team of{" "}
+          <span style={{ fontWeight: "bold" }}>150 clients</span>, providing top-notch security solutions. Our dedicated team of{" "}
           <span style={{ fontWeight: "bold" }}>200+ security personnel</span> is committed to ensuring the safety and well-being of our clients and their assets.
         </Typography>
         <Grid container spacing={8} sx={{ justifyContent: "center" }}>

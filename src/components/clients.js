@@ -1,10 +1,17 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
+import client1 from "../asset/c1.jpeg";
+import client2 from "../asset/c2.jpeg";
+import client3 from "../asset/c3.webp";
+import client4 from "../asset/c4.jpeg";
+import client5 from "../asset/c5.png";
+import client6 from "../asset/c6.png";
+import client7 from "../asset/c8.jpeg";
 
 // Animation for sliding the clients to the left
 const scroll = keyframes`
   0% {
-    transform: translateX(0);
+    transform: translateX(100%);
   }
   100% {
     transform: translateX(-100%);
@@ -47,32 +54,37 @@ const Client = styled.div`
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  font-weight: bold;
   flex-shrink: 0; /* Prevents shrinking when container is resized */
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 8px;
+  }
 `;
 
 const clients = [
-  "Client 1",
-  "Client 2",
-  "Client 3",
-  "Client 4",
-  "Client 5",
-  "Client 6",
-  "Client 7",
-  "Client 8",
-  "Client 9",
-  "Client 10",
+  client1,
+  client2,
+  client3,
+  client4,
+  client5,
+  client6,
+  client7,
 ];
 
 const Clients = () => {
   return (
-    <ClientsWrapper>
+    <ClientsWrapper >
       <ClientsContainer>
         {clients.map((client, index) => (
-          <Client key={index}>{client}</Client>
+          <Client key={index}>
+            <img src={client} alt={`Client ${index + 1}`} />
+          </Client>
         ))}
         {clients.map((client, index) => (
-          <Client key={`duplicate-${index}`}>{client}</Client>
+          <Client key={`duplicate-${index}`}>
+            <img src={client} alt={`Client ${index + 1}`} />
+          </Client>
         ))}
       </ClientsContainer>
     </ClientsWrapper>

@@ -25,6 +25,23 @@ const Navbar = () => {
 
   const isMobile = useMediaQuery({ maxWidth: 768 });
 
+  const handleDownload = () => {
+    // Toggle the menu (if applicable)
+    setIsOpen(!isOpen);
+
+    // Create a temporary link element
+    const link = document.createElement("a");
+    link.href = "Clientlist (1).pdf";
+    link.download = "Clientlist.pdf"; // Set the name for the downloaded file
+    link.click();
+  };
+  const handleDownloadDesktop = () => {
+
+    const link = document.createElement("a");
+    link.href = "Clientlist (1).pdf";
+    link.download = "Clientlist.pdf"; // Set the name for the downloaded file
+    link.click();
+  };
   return (
     <Nav>
       <NavbarContainer>
@@ -59,6 +76,7 @@ const Navbar = () => {
           <NavLink href="#about">Home</NavLink>
           <NavLink href="#projects">Services</NavLink>
           <NavLink href="#skills">Gallery</NavLink>
+          <NavLink href="#clients" onClick={handleDownloadDesktop}>Clients</NavLink>
           <NavLink href="#contact">Contact Us</NavLink>
         </NavItems>
         {isOpen && (
@@ -86,6 +104,12 @@ const Navbar = () => {
               }}
             >
               Services
+            </MobileLink>
+            <MobileLink
+              href="#clients"
+              onClick={handleDownload}
+            >
+              Clients
             </MobileLink>
             <MobileLink
               href="#contact"

@@ -100,6 +100,7 @@ function Footer() {
           <NavLink href="#about">About</NavLink>
           <NavLink href="#skills">Gallery</NavLink>
           <NavLink href="#projects">Services</NavLink>
+          <NavLink href="#clients">Clients</NavLink>
           <NavLink href="#contact">Contact</NavLink>
           {/* <NavLink onClick={handleManageClick}>Manage</NavLink> */}
         </Nav>
