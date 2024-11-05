@@ -39,7 +39,8 @@ const Navbar = () => {
 
     const link = document.createElement("a");
     link.href = "Clientlist (1).pdf";
-    link.download = "Clientlist.pdf"; // Set the name for the downloaded file
+    link.target = "_blank"; // Open the PDF in a new tab
+    link.rel = "noopener noreferrer"; // Security feature for external links
     link.click();
   };
   return (
